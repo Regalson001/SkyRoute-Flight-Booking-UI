@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyRoute | Book Your Flight</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Sky<span>Route</span></h1>
+      <nav>
+        <a href="#">Flights</a>
+        <a href="#">Destinations</a>
+        <a href="#">Manage Booking</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="booking-card">
+      <div class="card-header">
+        <h2>Find & Book Your Flight</h2>
+        <p>Explore destinations worldwide with seamless booking.</p>
+      </div>
+
+      <form class="booking-form" action="#" method="POST">
+        <!-- Trip Type Selection -->
+        <div class="trip-type-group">
+          <label class="radio-label">
+            <input type="radio" name="tripType" value="roundtrip" checked />
+            <span class="custom-radio"></span> Round Trip
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="tripType" value="oneway" />
+            <span class="custom-radio"></span> One Way
+          </label>
+        </div>
+
+        <!-- Route Details -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="from">From (Origin)</label>
+            <input type="text" id="from" name="from" placeholder="e.g., London (LHR)" required />
+          </div>
+
+          <div class="form-group">
+            <label for="to">To (Destination)</label>
+            <input type="text" id="to" name="to" placeholder="e.g., New York (JFK)" required />
+          </div>
+        </div>
+
+        <!-- Dates & Passengers -->
+        <div class="form-grid ternary">
+          <div class="form-group">
+            <label for="departure">Departure Date</label>
+            <input type="date" id="departure" name="departure" required />
+          </div>
+
+          <div class="form-group">
+            <label for="return">Return Date</label>
+            <input type="date" id="return" name="return" />
+          </div>
+
+          <div class="form-group">
+            <label for="passengers">Passengers</label>
+            <select id="passengers" name="passengers">
+              <option value="1">1 Adult</option>
+              <option value="2">2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="family">Family (2 Adults, 2 Kids)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Travel Class -->
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="class">Travel Class</label>
+            <select id="class" name="class">
+              <option value="economy">Economy</option>
+              <option value="premium">Premium Economy</option>
+              <option value="business">Business Class</option>
+              <option value="first">First Class</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Notification Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="search-btn">Search Available Flights</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 SkyRoute Travel Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
